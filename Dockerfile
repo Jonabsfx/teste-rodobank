@@ -1,4 +1,4 @@
-FROM php:zts-bullseye
+FROM php:8.2.0beta1-fpm-buster
 
 # Arguments defined in docker-compose.yml
 ARG user

@@ -8,10 +8,9 @@ services:
             args:
                 user: jonabsfx
                 uid: 1918
-            context: .
+            context: ./
             dockerfile: Dockerfile
         image: jonabsfx:laravel-app
-        restart: unless-stopped
         working_dir: /var/www/
         volumes:
             - ./:/var/www
@@ -19,6 +18,8 @@ services:
             - redis
         networks:
             - laravel
+        stdin_open: true
+        tty: true 
 
     # nginx
     nginx:
